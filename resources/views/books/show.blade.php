@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <th>Kategori</th>
-            <td>{{ $book['kategori'] }}</td>
+            <td>{{ \App\Models\Category::find($book['category_id'])?->nama_kategori ?? '-' }}</td>
         </tr>
     </table>
 </body>
