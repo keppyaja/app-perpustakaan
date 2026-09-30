@@ -9,6 +9,19 @@
         table { border-collapse: collapse; width: 100%; margin-top: 16px; }
         th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
         .info th { width: 160px; background: #f3f4f6; }
+        
+        /* CSS Badge Tambahan */
+        .badge { 
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            font-size: 14px; 
+            color: #fff; 
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge-dikembalikan { background: #10b981; }
+        .badge-dipinjam { background: #f59e0b; }
+        .badge-terlambat { background: #ef4444; }
     </style>
 </head>
 <body>
@@ -38,7 +51,11 @@
         </tr>
         <tr>
             <th>Status</th>
-            <td>{{ ucfirst($loan['status']) }}</td>
+            <td>
+                <span class="badge badge-{{ $loan['status'] }}">
+                    {{ ucfirst($loan['status']) }}
+                </span>
+            </td>
         </tr>
     </table>
 
