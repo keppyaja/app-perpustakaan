@@ -41,8 +41,8 @@
             <td>{{ $book['stok'] }}</td>
         </tr>
         <tr>
-            <th>Kategori</th>
-            <td>{{ \App\Models\Category::find($book['category_id'])?->nama_kategori ?? '-' }}</td>
+            <th>Kategori</th>  
+            <td>{{ $book['category']['nama_kategori'] }}</td>
         </tr>
     </table>
 </body>
